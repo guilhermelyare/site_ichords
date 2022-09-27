@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="pt-br"><head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ichords</title>
+    <link rel="shortcut icon" href="img/Logo-Icon.svg" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link href="http://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    
+</head>
+<body onload="first()" cz-shortcut-listen="true">
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+  <a id="logo" class="navbar-brand" href="#" onclick="executar1()"><img src="img/ichords.svg" alt="Logo_app" width="45%"></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+      <a class="nav-item nav-link" href="#contain_section" onclick="animeScroll()">Sobre o app</a>
+      <a class="nav-item nav-link" href="#acervo">Acervo</a>
+      <a class="nav-item nav-link" href="#faq">FAQ</a>
+      <a class="nav-item nav-link" href="#inscreva_se">Inscreva-se</a>
+      <a class="nav-item nav-link" href="#footer">Contato</a>
+    </div>
+  </div>
+</nav>
+
+
+  </header>
+  <main>
+    <section class="video_section container">
+      <div class="Phone">
+        <img src="img/VideoFramePhone2.png" alt="" id="BG">
+        <div class="slider" id="slider">
+
+          <div class="slides" id="slides">
+            <video onclick="executar1()" preload="" class="video video1" id="video1" autoplay="true" muted="muted" style="margin-left: 0px; transition: all 600ms ease 0s;">
+              <source src="img/Video1.mp4" type="video/mp4">
+            </video>
+            <video onclick="executar2()" preload="" class="video" id="video2" autoplay="true" muted="muted">
+              <source src="img/Video2.mp4" type="video/mp4">
+            </video>
+            <video preload="" class="video" id="video3" autoplay="true" muted="muted"><source src="img/Video1.mp4" type="video/mp4">
+            </video>
+            
+            <button onclick="back_video()" id="first" style="display: none;"><img src="img/LeftArrow.svg" alt=""></button> 
+            <button onclick="play_pause()" id="play"><img src="img/Play.svg" id="img_play" style="display: none;"></button>
+            <button onclick="pass_video()" id="second" style="display: inline;"><img src="img/RightArrow.svg" alt=""></button>
+            <button onclick="mute()" id="mute"><img src="img/SoundOFF.svg" id="muted" alt="" style="display: inline;"><img src="img/SoundON.svg" id="speaker" alt="" style="display: none;"></button>
+          </div>
+
+          
+
+          <div class="manual-navigation">
+            <label class="manual-btn" onclick="executar1()" id="btn1" style="background-color: rgb(255, 255, 255);"></label>
+            <label class="manual-btn" onclick="executar2()" id="btn2" style="background-color: rgba(255, 255, 255, 0);"></label>
+            <label class="manual-btn" onclick="executar3()" id="btn3" style="background-color: rgba(255, 255, 255, 0);"></label>
+          </div>
+        </div>
+        
+      </div>
+      <aside id="test">
+        <h1>Compartilhe sua paixão pela música</h1>
+        <p>Com o ichords é facil tocar suas músicas favoritas</p>
+        <a href="#" id="Download_link">
+          <img src="img/GooglePlay.svg" alt="">
+        </a>
+      </aside>
+    </section>
+    <article id="contain_section">
+      <div class="contain_section_1">
+        <img src="img/Features1.png" alt="" srcset="" class="img" data-anime="left">
+        <aside data-anime="fade">
+          <h1>Escolha entre hits e clássicos da música</h1>
+          <p>Uma seleção de sucessos para todos os estilos</p>
+        </aside>
+      </div>
+      <div class="contain_section_2">
+        <aside data-anime="fade">
+          <h1>Playlists para cada momento</h1>
+          <p>Repertórios sugeridos para uma experiência personalizada</p>
+        </aside>
+        <img src="img/Features2.png" alt="" srcset="" class="img" data-anime="right">
+      </div>
+      <div class="contain_section_3">
+        <img src="img/Features3.png" alt="" srcset="" class="img" data-anime="left">
+        <aside data-anime="fade">
+          <h1>Cada acorde em detalhes</h1>
+          <p>Analise os acordes e os detalhes da música</p>
+        </aside>
+      </div>
+      <div class="contain_section_4">
+        <aside data-anime="fade">
+          <h1>Toque, Grave e Compartilhe</h1>
+          <p>Veja os acordes em tempo real e compartilhe sua performance nas redes sociais</p>
+        </aside>
+        <img src="img/Features4.png" alt="" srcset="" class="img" data-anime="right">
+      </div>
+    </article>
+    <div class="container" id="acervo">
+      <div class="title" data-anime="fade">
+        <h1>Rock, Pop, Sertanejo e muito mais</h1>
+        <p>Uma coleção de cifras de diversos gêneros musicais</p>
+      </div>
+      <div class="albuns" data-anime="fade">
+        <label onclick="pop(0)" onmouseover="hover_album(0)" onmouseout="hoverOut_album(0)"><img src="img/Cover_1.png" alt="" id="cover"><img src="img/Play.svg" alt="" id="acervo_btn"></label>
+        <label onclick="pop(1)" onmouseover="hover_album(1)" onmouseout="hoverOut_album(1)"><img src="img/Cover_2.png" alt="" id="cover"><img src="img/Play.svg" alt="" id="acervo_btn"></label>
+        <label onclick="pop(2)" onmouseover="hover_album(2)" onmouseout="hoverOut_album(2)"><img src="img/Cover_3.png" alt="" id="cover"><img src="img/Play.svg" alt="" id="acervo_btn"></label>
+        <label onclick="pop(3)" onmouseover="hover_album(3)" onmouseout="hoverOut_album(3)"><img src="img/Cover_4.png" alt="" id="cover"><img src="img/Play.svg" alt="" id="acervo_btn"></label>
+        <label onclick="pop(4)" onmouseover="hover_album(4)" onmouseout="hoverOut_album(4)"><img src="img/Cover_5.png" alt="" id="cover"><img src="img/Play.svg" alt="" id="acervo_btn"></label>
+        <label onclick="pop(5)" onmouseover="hover_album(5)" onmouseout="hoverOut_album(5)"><img src="img/Cover_6.png" alt="" id="cover"><img src="img/Play.svg" alt="" id="acervo_btn"></label>
+        <label onclick="pop(6)" onmouseover="hover_album(6)" onmouseout="hoverOut_album(6)"><img src="img/Cover_7.png" alt="" id="cover"><img src="img/Play.svg" alt="" id="acervo_btn"></label>
+        <label onclick="pop(7)" onmouseover="hover_album(7)" onmouseout="hoverOut_album(7)"><img src="img/Cover_8.png" alt="" id="cover"><img src="img/Play.svg" alt="" id="acervo_btn"></label>
+      </div>
+      <div class="carousel animate" data-anime="fade">
+        <img src="img/icon-left.png" alt="" onclick="back_carousel()">
+        <div class="albuns-carousel">
+          <div class="item-carousel">
+            <label id="first_cover" onmouseover="hover_carousel(0)" onmouseout="hoverOut_carousel(0)" onclick="pop(0)"><img src="img/Cover_1.png" alt="" id="cover_carousel"><img src="img/Play.svg" alt="" id="btn_carousel"></label>
+            <label onmouseover="hover_carousel(1)" onmouseout="hoverOut_carousel(1)" onclick="pop(1)"><img src="img/Cover_2.png" alt="" id="cover_carousel"><img src="img/Play.svg" alt="" id="btn_carousel"></label>
+            <label onmouseover="hover_carousel(2)" onmouseout="hoverOut_carousel(2)" onclick="pop(2)"><img src="img/Cover_3.png" alt="" id="cover_carousel"><img src="img/Play.svg" alt="" id="btn_carousel"></label>
+            <label onmouseover="hover_carousel(3)" onmouseout="hoverOut_carousel(3)" onclick="pop(3)"><img src="img/Cover_4.png" alt="" id="cover_carousel"><img src="img/Play.svg" alt="" id="btn_carousel"></label>
+            <label onmouseover="hover_carousel(4)" onmouseout="hoverOut_carousel(4)" onclick="pop(4)"><img src="img/Cover_5.png" alt="" id="cover_carousel"><img src="img/Play.svg" alt="" id="btn_carousel"></label>
+            <label onmouseover="hover_carousel(5)" onmouseout="hoverOut_carousel(5)" onclick="pop(5)"><img src="img/Cover_6.png" alt="" id="cover_carousel"><img src="img/Play.svg" alt="" id="btn_carousel"></label>
+            <label onmouseover="hover_carousel(6)" onmouseout="hoverOut_carousel(6)" onclick="pop(6)"><img src="img/Cover_7.png" alt="" id="cover_carousel"><img src="img/Play.svg" alt="" id="btn_carousel"></label>
+            <label onmouseover="hover_carousel(7)" onmouseout="hoverOut_carousel(7)" onclick="pop(7)"><img src="img/Cover_8.png" alt="" id="cover_carousel"><img src="img/Play.svg" alt="" id="btn_carousel"></label>
+          </div>
+        </div>
+        <img src="img/icon-right.png" alt="" onclick="pass_carousel()">
+      </div>
+      <div class="fixed-top" id="pop-up">
+        <div id="Phone_pop-up">
+          <img src="img/VideoFrame-2.png" alt="" id="bg_phone_pop-up">
+          <video id="Video_pop-up" style="display: none;">
+            <source src="img/Video2.mp4" type="video/mp4">
+          </video>
+          <video id="Video_pop-up" style="display: none;">
+            <source src="img/Video1.mp4" type="video/mp4">
+          </video>
+          <video id="Video_pop-up" style="display: none;">
+            <source src="img/Video2.mp4" type="video/mp4">
+          </video>
+          <video id="Video_pop-up" style="display: none;">
+            <source src="img/Video1.mp4" type="video/mp4">
+          </video>
+          <video id="Video_pop-up" style="display: none;">
+            <source src="img/Video2.mp4" type="video/mp4">
+          </video>
+          <video id="Video_pop-up" style="display: none;">
+            <source src="img/Video1.mp4" type="video/mp4">
+          </video>
+          <video id="Video_pop-up" style="display: none;">
+            <source src="img/Video2.mp4" type="video/mp4">
+          </video>
+          <video id="Video_pop-up" style="display: none;">
+            <source src="img/Video1.mp4" type="video/mp4">
+          </video>
+          <img src="img/SoundOFF.svg" id="muted_pop-up" alt="" onclick="mute_pop()">
+          <img src="img/SoundON.svg" id="speaker_pop-up" alt="" onclick="mute_pop()">
+          <button id="btn_close_pop-up" onclick="close_pop()"></button>
+        </div>
+        
+        <img src="img/Close.svg" alt="" id="close_pop-up" onclick="close_pop()">
+
+      </div>
+    </div>
+    
+    <div class="faq" id="faq">
+      <div class="box">
+    <div class="title_faq" data-anime="fade">
+        <h2>Perguntas frequentes</h2>
+    </div>
+
+    <div class="faqs">
+        <details data-anime="fade">
+            <summary data-anime="right">O que é o ichords? <img src="img/expand-arrow.png" alt=""></summary>
+            <p class="text">O ichords é um aplicativo para prática e aprendizagem de violão, que permite ao usuário tocar uma música visualizando os acordes em tempo real, ao mesmo tempo em que grava um vídeo da sua performance para compartilhar nas redes sociais.</p>
+        </details>
+        <details data-anime="fade">
+            <summary data-anime="right">Quanto custa o ichords? <img src="img/expand-arrow.png" alt=""></summary>
+            <p class="text">O ichords é gratuito. Baixe o aplicativo na Google Play Store e divirta-se.</p>
+        </details>
+        <details data-anime="fade">
+            <summary data-anime="right">Como uso o ichords? <img src="img/expand-arrow.png" alt=""></summary>
+            <p class="text">Escolha a música que deseja, confira os detalhes da música e os acordes que irá tocar, personalize a tela de performance de forma que sinta confortável, escolha o trecho da música que mais gostar e em seguida grave uma performance em vídeo. Ao final, compartilhe e desafie seus amigos a fazerem o mesmo.</p>
+        </details>
+    </div>
+
+</div>
+    </div>
+  </main>
+  <footer class="container footer" id="footer">
+    <div class="container apoiadores">
+
+    </div>
+    <div class="container ichords">
+      <a href=""></a>
+      <a href=""></a>
+      <a href=""></a>
+      <a href=""></a>
+      <a href=""></a>
+    </div>
+    <div class="container legal">
+      <a href=""></a>
+      <a href=""></a>
+      <a href=""></a>
+      <a href=""></a>
+    </div>
+    <div class="container contato">
+      <p></p>
+      <p></p>
+      <p></p>
+      <p></p>
+      <p></p>
+    </div>
+  </footer>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/script.js"></script>
+</body></html>
