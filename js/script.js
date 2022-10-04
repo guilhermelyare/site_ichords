@@ -1,3 +1,4 @@
+//Variaveis do slider de videos
 const video_1 = document.getElementById("video1");
 const video_2 = document.getElementById("video2");
 const video_3 = document.getElementById("video3");
@@ -9,23 +10,49 @@ const back_btn = document.getElementById("first");
 const play_btn = document.getElementById("img_play");
 const muted = document.getElementById("muted");
 const speaker = document.getElementById("speaker");
+var current = 1;
+
+//Variaveis para a animação do conteudo
 var media = window.matchMedia("(max-width: 992px)");
 const target = document.querySelectorAll('[data-anime]');
-const VideoTarget = document.querySelectorAll('#Video_pop-up');
 const animationClass = 'animate';
+
+//Variaveis do pop-up
+const bg_phone_pop = document.getElementById("bg_phone_pop-up");
+const VideoTarget = document.querySelectorAll('#Video_pop-up');
 const pop_up =  document.getElementById("pop-up");
-var current = 1;
-var positon = 0;
-var hover = 0;
-var out = 0;
+const speaker_pop = document.getElementById('speaker_pop-up');
+const muted_pop = document.getElementById('muted_pop-up');
 var close_video = 0;
 
+//Variaveis para auxiliar na animação do acervo
+const CoverTarget = document.querySelectorAll('#cover');
+const AcervoBtnTarget = document.querySelectorAll('#acervo_btn');
+var hover = 0;
+var out = 0;
+
+// Variveis para o carrousel do acervo
+const CoverCarouselTarget = document.querySelectorAll('#cover_carousel');
+const CarouselBtnTarget = document.querySelectorAll('#btn_carousel');
+var hover_carousel;
+var out_carousel;
+const first_cover = document.getElementById('first_cover');
+var pass=-23.5;
+var back=0;
+
+// Funções para animção dos conteudos
 function animeScroll(){
     const windowTop = window.pageYOffset + ((window.innerHeight * 3)/4);//Distanca da barra de sroll para o topo da pagina
 
     target.forEach(function(element){
         if((windowTop) > element.offsetTop){//distancia de cada elemento que tem a data-anime para o topo da pagina
             element.classList.add(animationClass);
+            video_1.muted=true;
+            video_2.muted=true;
+            video_3.muted=true;
+            speaker.style.display = "none";
+            muted.style.display = "inline";
+            muted.style.transition = "all 400ms";
         }else{
             element.classList.remove(animationClass);
         }
@@ -39,12 +66,15 @@ window.addEventListener('scroll', function(){
     animeScroll();
 })
 
+//Função para começar video automaticamente ao iniciar a página
 function first() { 
     executar1();
     speaker.style.display = "none";
     muted.style.display = "inline";
 }
 
+
+//Funçoes para execução dos videos em slider
 function executar1(){
     btn1.style.backgroundColor = '#ffffff';
     btn2.style.backgroundColor = '#ffffff00';
@@ -70,7 +100,7 @@ function executar2(){
     if(media.matches){
         video_1.style.marginLeft = "-281.25px";
     }else{
-        video_1.style.marginLeft = "-320.625px";
+        video_1.style.marginLeft = "-257.625px";
     }
     video_1.style.transition = "all 600ms";
     play_btn.style.display = "none";
@@ -89,7 +119,7 @@ function executar3(){
     if(media.matches){
         video_1.style.marginLeft = "-562.5px";
     }else{
-        video_1.style.marginLeft = "-641.250px";
+        video_1.style.marginLeft = "-515.25px";
     }
     video_1.style.transition = "all 600ms";
     play_btn.style.display = "none";
@@ -110,6 +140,7 @@ video_3.onended = function() {
     executar1();
 };
 
+//Funções dos botões do slider de videos
 function pass_video(){
     if (current==1){
         executar2();
@@ -176,6 +207,8 @@ function mute(){
 
 }
 
+
+//Funções para o pop-up
 function close_pop(){
     pop_up.style.display ="none";
     VideoTarget[close_video].style.display = "none";
@@ -183,7 +216,6 @@ function close_pop(){
     reloadScrollBars();
 }
 
-const bg_phone_pop = document.getElementById("bg_phone_pop-up");
 
 function pop(position){
     close_video = position;
@@ -204,9 +236,6 @@ function pop(position){
     }
 }
 
-const speaker_pop = document.getElementById('speaker_pop-up');
-const muted_pop = document.getElementById('muted_pop-up');
-
 function mute_pop(){
     if (VideoTarget[close_video].muted == true){
         VideoTarget[close_video].muted = false;
@@ -221,10 +250,17 @@ function mute_pop(){
     }
 }
 
-const CoverTarget = document.querySelectorAll('#cover');
-const AcervoBtnTarget = document.querySelectorAll('#acervo_btn');
+function unloadScrollBars() {
+    document.documentElement.style.overflow = 'hidden';
+    document.body.scroll = "no";
+}
 
+function reloadScrollBars() {
+    document.documentElement.style.overflow = 'auto';
+    document.body.scroll = "yes"; 
+}
 
+//Funções para animação do acervo
 function hover_album(hover){
     CoverTarget.forEach(function(element){
         if(element == CoverTarget[hover]){
@@ -248,11 +284,7 @@ function hoverOut_album(out){
     });
 }
 
-const CoverCarouselTarget = document.querySelectorAll('#cover_carousel');
-const CarouselBtnTarget = document.querySelectorAll('#btn_carousel');
-var hover_carousel;
-var out_carousel;
-
+// Funções para o carrousel do acervo
 function hover_carousel(hover_carousel){
     CoverCarouselTarget.forEach(function(element){
         if(element == CoverCarouselTarget[hover_carousel]){
@@ -275,23 +307,6 @@ function hoverOut_carousel(out_carousel){
         element.style.opacity = "0.3";
     });
 }
-
-
-
-function unloadScrollBars() {
-    document.documentElement.style.overflow = 'hidden';
-    document.body.scroll = "no";
-}
-
-function reloadScrollBars() {
-    document.documentElement.style.overflow = 'auto';
-    document.body.scroll = "yes"; 
-}
-
-
-const first_cover = document.getElementById('first_cover');
-var pass=-23.5;
-var back=0;
 
 function pass_carousel(){
     first_cover.style.marginLeft = pass+"vw";
