@@ -1087,11 +1087,26 @@ footer{
 
 @media screen and (max-width:600px) {
 
-    .video_section > aside {
-        width: 110vw;
+    nav button{
+        margin-right: 28px;
     }
 
-    
+    main {
+        width: 125vw;
+    }
+
+    .video_section > aside {
+        width: 360px;
+    }
+
+    .video_section{
+        display: flex;
+        align-items: center;
+        width: 100vw;
+        gap: 0;
+        padding: 0;
+        margin: auto;
+    }
 }
 
 
