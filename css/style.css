@@ -781,7 +781,7 @@ footer{
     .navbar-nav{
         display: flex;
         align-items: center;
-        width: 100vw;
+        width: 10vw;
         gap: 0;
         padding: 0;
     }
@@ -864,33 +864,35 @@ footer{
     article > div {
         flex-direction: column-reverse;
         align-items: center;
-        margin-top: 15vh;
+        margin-top: 150px;
     }
 
     article{
-        height: 400vh;
+        height: 3500px;
         margin-top: 0;
-        padding-top: 0;
+        padding-top: 300px;
     }
 
     .img{
-        width: 400px;
+        width: 443px;
         height: 400px;
         margin: 0;
         margin-top: 10px;
     }
 
     .contain_section_1 > aside {
-        width: 60vw;
+        width: 590px;
     }
 
     .contain_section_1 > aside > h1{
-        font-size: 6vw;
+        font-size: 45px;
+        text-align: center;
     }
 
     .contain_section_1 > aside > p {
-        font-size: 3.5vw;
-        width: 61vw;
+        font-size: 30px;
+        width: 590px;
+        text-align: center;
     }
     
     .contain_section_2{
@@ -898,30 +900,34 @@ footer{
     }
 
     .contain_section_2 > aside {
-        width: 60vw;
+        width: 590px;
     }
 
     .contain_section_2 > aside > h1{
-        font-size: 6vw;
+        font-size: 45px;
+        text-align: center;
     }
 
     .contain_section_2 > aside > p {
-        font-size: 3.5vw;
-        width: 61vw;
+        font-size: 30px;
+        width: 590px;
+        text-align: center;
     }
 
     .contain_section_3 > aside {
-        width: 60vw;
+        width: 590px;
         margin-right: 0;
     }
 
     .contain_section_3 > aside > h1{
-        font-size: 6vw;
+        font-size: 45px;
+        text-align: center;
     }
 
     .contain_section_3 > aside > p {
-        font-size: 3.5vw;
-        width: 61vw;
+        font-size: 30px;
+        width: 590px;
+        text-align: center;
     }
 
     .contain_section_3 img {
@@ -933,16 +939,18 @@ footer{
     }
 
     .contain_section_4 > aside {
-        width: 60vw;
+        width: 590px;
     }
 
     .contain_section_4 > aside > h1{
-        font-size: 6vw;
+        font-size: 45px;
+        text-align: center;
     }
 
     .contain_section_4 > aside > p {
-        font-size: 3.5vw;
-        width: 61vw;
+        font-size: 30px;
+        width: 590px;
+        text-align: center;
     }
 
     .contain_section_4 > img{
@@ -953,22 +961,25 @@ footer{
     .albuns{
         display: none;
     }
-    .title{
-        width: 65vw;
+    
+    .title {
+        width: 500px;
     }
 
     .title > h1{
-        font-size: 6vw;
+        font-size: 45px;
     }
     
     .title > p{
-        font-size: 3.5vw;
+        font-size: 21px;
     }
 
     .carousel{
         display: flex;
         flex-direction: row;
         align-items: center;
+        width: 440px;
+        height: 235px;
     }
 
     .carousel img {
@@ -980,9 +991,8 @@ footer{
     }
     
     .albuns-carousel {
-        height: 20vw;
-        width: 80vw;
-        overflow: hidden;
+        height: 180px;
+        overflow: scroll;
     }
     
     .albuns-carousel::-webkit-scrollbar {
@@ -996,14 +1006,14 @@ footer{
     }
     
     #cover_carousel {
-        width: 20vw;
-        height: 20vw;
+        width: 173px;
+        height: 173px;
         transition: 500ms;
     }
     
     .item-carousel label{
-        width: 20vw;
-        height: 20vw;
+        width: 200px;
+        height: 173px;
         margin-bottom: 0;
         border: none;
         background: none;
@@ -1019,7 +1029,7 @@ footer{
     
     #btn_carousel{
         position: absolute;
-        width: 4vw;
+        width: 40px;
         opacity: 0.3;
         transition: 500ms;
     }
@@ -1080,11 +1090,6 @@ footer{
     }
 }
 
-@keyframes mymove {
-    from {opacity: 0;}
-    to {opacity: 1;}
-}
-
 @media screen and (max-width:600px) {
 
     nav button{
@@ -1092,7 +1097,7 @@ footer{
     }
 
     main {
-        width: 125vw;
+        width: 100vw;
     }
 
     .video_section > aside {
@@ -1107,10 +1112,122 @@ footer{
         padding: 0;
         margin: auto;
     }
+
+    article > div {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    article{
+        height: 400vh;
+        margin-top: 0;
+        padding-top: 300px;
+    }
+
+    .img{
+        width: 443px;
+        height: 400px;
+        margin: 0;
+        margin-top: 10px;
+    }
+
+    .contain_section_1 > aside {
+        width: 410px;
+    }
+
+    .contain_section_1 > aside > h1{
+        font-size: 30px;
+        text-align: center;
+    }
+
+    .contain_section_1 > aside > p {
+        font-size: 17px;
+        width: 400px;
+        text-align: center;
+    }
+
+    .contain_section_2 > aside {
+        width: 410px;
+    }
+
+    .contain_section_2 > aside > h1{
+        font-size: 30px;
+        text-align: center;
+    }
+
+    .contain_section_2 > aside > p {
+        font-size: 17px;
+        width: 400px;
+        text-align: center;
+    }
+
+    .contain_section_3 > aside {
+        width: 410px;
+        margin-right: 0;
+    }
+
+    .contain_section_3 > aside > h1{
+        font-size: 30px;
+        text-align: center;
+    }
+
+    .contain_section_3 > aside > p {
+        font-size: 17px;
+        width: 400px;
+        text-align: center;
+    }
+
+    .contain_section_4 > aside {
+        width: 410px;
+    }
+
+    .contain_section_4 > aside > h1{
+        font-size: 30px;
+        text-align: center;
+    }
+
+    .contain_section_4 > aside > p {
+        font-size: 17px;
+        width: 400px;
+        text-align: center;
+    }
+
+    #acervo {
+        height: 500px;
+    }
+
+    .title{
+        width: 400px;
+    }
+
+    .title > h1 {
+        font-size: 35px;
+    }
+
+    .title p{
+        text-align:  initial;
+    }
+
+    footer{
+        display: none;
+    }
 }
 
 
 @media screen and (max-width:480px) {
+    [data-anime="left"]{
+        transform: translate3d(-7px,0,0);
+    }
+    
+    [data-anime="right"]{
+        transform: translate3d(7px,0,0);
+    }
+
+    .navbar{
+        background-color: #000000;
+        width: 100vw;
+    }
+
     .navbar-nav {
         display: flex;
         align-items: center;
@@ -1120,5 +1237,88 @@ footer{
         margin: auto;
     }
 
+    main {
+        width: 100vw;
+        padding-top: 100px;
+    }
 
+    article{
+        height: 3500px;
+    }
+
+    article div{
+        margin-top: 200px;
+    }
+
+    #contain_section{
+        padding-top: 400px;
+    }
+
+    .img {
+        width: 340px;
+        height: 350px;
+    }
+
+    .contain_section_1 > aside {
+        width: 300px;
+    }
+
+    .contain_section_1> aside > p {
+        width: 300px;
+        text-align: center;
+    }
+
+    .contain_section_2 > aside {
+        width: 300px;
+    }
+
+    .contain_section_2> aside > p {
+        width: 300px;
+        text-align: center;
+    }
+
+    .contain_section_3 > aside {
+        width: 300px;
+        margin-right: 0;
+    }
+
+    .contain_section_3 > aside > h1{
+        font-size: 30px;
+        text-align: center;
+    }
+
+    .contain_section_3 > aside > p {
+        font-size: 17px;
+        width: 300px;
+        text-align: center;
+    }
+
+    .contain_section_4 > aside {
+        width: 300px;
+    }
+
+    .contain_section_4 > aside > h1{
+        font-size: 30px;
+        text-align: center;
+    }
+
+    .contain_section_4 > aside > p {
+        font-size: 17px;
+        width: 300px;
+        text-align: center;
+    }
+
+    .title {
+        width: 350px;
+    }
+
+    .carousel{
+        width: 350px;
+    }
+}
+
+
+@keyframes mymove {
+    from {opacity: 0;}
+    to {opacity: 1;}
 }
