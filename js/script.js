@@ -14,6 +14,7 @@ var current = 1;
 
 //Variaveis para a animação do conteudo
 var media = window.matchMedia("(max-width: 992px)");
+var media2 = window.matchMedia("(max-width: 600px)");
 const target = document.querySelectorAll('[data-anime]');
 const animationClass = 'animate';
 
@@ -220,17 +221,26 @@ function close_pop(){
 function pop(position){
     close_video = position;
     unloadScrollBars();
-    VideoTarget[position].style.display = "flex";
-    pop_up.style.display ="flex";
+    
     if(media.matches){
         bg_phone_pop.style.display = "none";
     }else{
         bg_phone_pop.style.display = "flex";
     }
-    VideoTarget[position].play();
-    VideoTarget[position].muted = false;
-    speaker_pop.style.display = "inline";
-    muted_pop.style.display = "none";
+
+    if (media2.matches){
+        VideoTarget[position].play();
+        VideoTarget[position].muted = false;
+        speaker_pop.style.display = "none";
+        muted_pop.style.display = "none";
+    }else{
+        VideoTarget[position].style.display = "flex";
+        pop_up.style.display ="flex";
+        VideoTarget[position].play();
+        VideoTarget[position].muted = false;
+        speaker_pop.style.display = "inline";
+        muted_pop.style.display = "none";
+    }
     VideoTarget[position].onended = function(){
         close_pop();
     }
