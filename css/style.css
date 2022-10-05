@@ -768,10 +768,6 @@ footer{
     }
 }
 
-@media screen and (max-width:1025px){
-    
-}
-
 /* Tamanho de tela que inicia o menu responsivo */ 
 @media screen and (max-width: 992px){
     body{
@@ -1088,6 +1084,38 @@ footer{
         width: 77vw;
         font-size: 4vw;
     }
+    
+    .logo-apoiadores{
+        width: 96vw;
+    }
+    
+    .Infos {
+        width: 94vw;
+    }
+
+    .Infos div{
+        max-width: 165px;
+    }
+
+    .Infos div h3 {
+        font-size: 15px;
+        margin: 0 auto;
+    }
+
+    .Infos div a {
+        font-size: 13px;
+        margin: auto;
+    }
+
+    .Infos div p {
+        font-size: 13px;
+        margin: auto;
+    }
+
+    .redes_sociais {
+        width: 84vw;
+    }
+
 }
 
 @media screen and (max-width:600px) {
@@ -1208,8 +1236,9 @@ footer{
         text-align:  initial;
     }
 
-    footer{
-        display: none;
+    .logo-apoiadores img {
+        width: 107px;
+        height: 39px;
     }
 }
 
@@ -1314,6 +1343,44 @@ footer{
 
     .carousel{
         width: 350px;
+    }
+
+    .logo-apoiadores img {
+        width: 84px;
+        height: 30px;
+    }
+
+    .Infos {
+        width: 94vw;
+        height: 400px;
+        flex-wrap: wrap;
+    }
+
+    .Infos div{
+        margin: auto;
+    }
+
+    .Infos div h3 {
+        margin-right: 0;
+        margin-left: 0;
+    }
+
+    .Infos div a {
+        margin: 5px 0px;
+    }
+
+    .Infos div p {
+        margin-right: 0;
+        margin-left: 0;
+    }
+
+    .redes_sociais p {
+        font-size: 13px;
+    }
+
+    .redes_sociais {
+        padding-top: 34px;
+        padding-bottom: 50px;
     }
 }
 
