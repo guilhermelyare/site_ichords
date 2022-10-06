@@ -646,6 +646,10 @@ footer{
     flex-direction: row;
 }
 
+.logo-apoiadores img:first-child{
+    width: 160px;
+}
+
 .logo-apoiadores img{
     width: 136px;
     height: 50px;
