@@ -210,6 +210,7 @@ function mute(){
 
 
 //Funções para o pop-up
+/*
 function close_pop(){
     pop_up.style.display ="none";
     VideoTarget[close_video].style.display = "none";
@@ -259,6 +260,7 @@ function mute_pop(){
         muted_pop.style.transition = "all 400ms";
     }
 }
+*/
 
 function unloadScrollBars() {
     document.documentElement.style.overflow = 'hidden';
@@ -293,6 +295,74 @@ function hoverOut_album(out){
         element.style.opacity = "0.3";
     });
 }
+
+// Variaveis para os videos do acervo
+const VideosAcervo = document.querySelectorAll('#Video_acervo');
+const acervo_phone = document.getElementById("video_acervo");
+const title = document.getElementById("title");
+const albuns = document.getElementById("albuns");
+const cover1video_acervo = document.getElementById("first_cover_carousel_video_acervo");
+const albuns_carroussel = document.getElementById("albuns-carousel_video_acervo");
+const muted_video_acervo = document.getElementById("muted_video_acervo");
+const speaker_video_acervo = document.getElementById("speaker_video_acervo");
+const covers_carroussel_acervo = document.querySelectorAll('cover_carousel_video_acervo');
+const btn_carroussel_acervo = document.querySelectorAll('btn_carousel_video_acervo');
+var opcao;
+var anterior=0;
+
+// Funções para o videos do acervo 
+
+function video_anterior(anterior){
+    VideosAcervo[anterior].style.display = "none";
+    VideosAcervo[anterior].pause();
+}
+
+function acervo_video(opcao){
+    video_anterior(anterior);
+    anterior=opcao;
+    title.style.display = "none";
+    albuns.style.display = "none";
+    acervo_phone.style.display = "flex";
+    VideosAcervo[opcao].style.display = "flex";
+    VideosAcervo[opcao].play();
+    VideosAcervo[opcao].muted=false;
+    muted_video_acervo.style.display = "none";
+    speaker_video_acervo.style.display = "inline";
+
+    VideosAcervo[opcao].onended = function() {
+        opcao++;
+        acervo_video(opcao);
+    };
+}
+
+function close_video_acervo(){
+    VideosAcervo[anterior].pause();
+    title.style.display = "inline";
+    albuns.style.display = "flex";
+    acervo_phone.style.display = "none";
+}
+
+function mute_video_acervo(){
+    if (VideosAcervo[anterior].muted==false){
+        VideosAcervo[anterior].muted=true;
+        muted_video_acervo.style.display = "inline";
+        speaker_video_acervo.style.display = "none";
+    }else{
+        VideosAcervo[anterior].muted=false;
+        muted_video_acervo.style.display = "none";
+        speaker_video_acervo.style.display = "inline";
+    }
+}
+
+function pass_carousel_video_acervo(){
+    albuns_carroussel.scrollLeft += 100;
+}
+
+function back_carousel_video_acervo(){
+    albuns_carroussel.scrollLeft -= 100;
+}
+
+
 
 // Funções para o carrousel do acervo
 function hover_carousel(hover_carousel){

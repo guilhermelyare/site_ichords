@@ -114,23 +114,71 @@
         <img src="img/Features4.webp" alt="" srcset="" class="img" data-anime="right">
       </div>
     </article>
-    <div id="acervo" >
-      <div class="title" data-anime="fade">
+    <div id="acervo">
+      <div class="title" id="title" data-anime="fade">
         <h1>Rock, Pop, Sertanejo e muito mais</h1>
         <p>Uma coleção de cifras de diversos gêneros musicais</p>
       </div>
-      <div class="albuns" data-anime="fade">
-        <label onclick="pop(0)" onmouseover="hover_album(0)" onmouseout="hoverOut_album(0)"><img src="img/Cover_1.webp" alt="" id="cover"><img src="img/Play.svg" alt="" id="acervo_btn"></label>
-        <label onclick="pop(1)" onmouseover="hover_album(1)" onmouseout="hoverOut_album(1)"><img src="img/Cover_2.webp" alt="" id="cover"><img src="img/Play.svg" alt="" id="acervo_btn"></label>
-        <label onclick="pop(2)" onmouseover="hover_album(2)" onmouseout="hoverOut_album(2)"><img src="img/Cover_3.webp" alt="" id="cover"><img src="img/Play.svg" alt="" id="acervo_btn"></label>
-        <label onclick="pop(3)" onmouseover="hover_album(3)" onmouseout="hoverOut_album(3)"><img src="img/Cover_4.webp" alt="" id="cover"><img src="img/Play.svg" alt="" id="acervo_btn"></label>
-        <label onclick="pop(4)" onmouseover="hover_album(4)" onmouseout="hoverOut_album(4)"><img src="img/Cover_5.webp" alt="" id="cover"><img src="img/Play.svg" alt="" id="acervo_btn"></label>
-        <label onclick="pop(5)" onmouseover="hover_album(5)" onmouseout="hoverOut_album(5)"><img src="img/Cover_6.webp" alt="" id="cover"><img src="img/Play.svg" alt="" id="acervo_btn"></label>
-        <label onclick="pop(6)" onmouseover="hover_album(6)" onmouseout="hoverOut_album(6)"><img src="img/Cover_7.webp" alt="" id="cover"><img src="img/Play.svg" alt="" id="acervo_btn"></label>
-        <label onclick="pop(7)" onmouseover="hover_album(7)" onmouseout="hoverOut_album(7)"><img src="img/Cover_8.webp" alt="" id="cover"><img src="img/Play.svg" alt="" id="acervo_btn"></label>
+      <div class="albuns" id="albuns" data-anime="fade">
+        <label onclick="acervo_video(0)" onmouseover="hover_album(0)" onmouseout="hoverOut_album(0)"><img src="img/Cover_1.webp" alt="" id="cover"><img src="img/Play.svg" alt="" id="acervo_btn"></label>
+        <label onclick="acervo_video(1)" onmouseover="hover_album(1)" onmouseout="hoverOut_album(1)"><img src="img/Cover_2.webp" alt="" id="cover"><img src="img/Play.svg" alt="" id="acervo_btn"></label>
+        <label onclick="acervo_video(2)" onmouseover="hover_album(2)" onmouseout="hoverOut_album(2)"><img src="img/Cover_3.webp" alt="" id="cover"><img src="img/Play.svg" alt="" id="acervo_btn"></label>
+        <label onclick="acervo_video(3)" onmouseover="hover_album(3)" onmouseout="hoverOut_album(3)"><img src="img/Cover_4.webp" alt="" id="cover"><img src="img/Play.svg" alt="" id="acervo_btn"></label>
+        <label onclick="acervo_video(4)" onmouseover="hover_album(4)" onmouseout="hoverOut_album(4)"><img src="img/Cover_5.webp" alt="" id="cover"><img src="img/Play.svg" alt="" id="acervo_btn"></label>
+        <label onclick="acervo_video(5)" onmouseover="hover_album(5)" onmouseout="hoverOut_album(5)"><img src="img/Cover_6.webp" alt="" id="cover"><img src="img/Play.svg" alt="" id="acervo_btn"></label>
+        <label onclick="acervo_video(6)" onmouseover="hover_album(6)" onmouseout="hoverOut_album(6)"><img src="img/Cover_7.webp" alt="" id="cover"><img src="img/Play.svg" alt="" id="acervo_btn"></label>
+        <label onclick="acervo_video(7)" onmouseover="hover_album(7)" onmouseout="hoverOut_album(7)"><img src="img/Cover_8.webp" alt="" id="cover"><img src="img/Play.svg" alt="" id="acervo_btn"></label>
+      </div>
+      <div id="video_acervo" style="display: none;">
+        <img src="img/Close.svg" alt="" id="close_video_acervo" onclick="close_video_acervo()">
+        <div id="Phone_acervo" >
+          <img src="img/VideoFrame-2.webp" alt="" id="bg_phone_acervo">
+          <video id="Video_acervo" style="display: none;">
+            <source src="img/Video2.mp4" type="video/mp4">
+          </video>
+          <video id="Video_acervo" style="display: none;">
+            <source src="img/Video1.mp4" type="video/mp4">
+          </video>
+          <video id="Video_acervo" style="display: none;">
+            <source src="img/Video2.mp4" type="video/mp4">
+          </video>
+          <video id="Video_acervo" style="display: none;">
+            <source src="img/Video1.mp4" type="video/mp4">
+          </video>
+          <video id="Video_acervo" style="display: none;">
+            <source src="img/Video2.mp4" type="video/mp4">
+          </video>
+          <video id="Video_acervo" style="display: none;">
+            <source src="img/Video1.mp4" type="video/mp4">
+          </video>
+          <video id="Video_acervo" style="display: none;">
+            <source src="img/Video2.mp4" type="video/mp4">
+          </video>
+          <video id="Video_acervo" style="display: none;">
+            <source src="img/Video1.mp4" type="video/mp4">
+          </video>
+          <img src="img/SoundOFF.svg" id="muted_video_acervo" alt="" onclick="mute_video_acervo()">
+          <img src="img/SoundON.svg" id="speaker_video_acervo" alt="" onclick="mute_video_acervo()">
+        </div>
+        <div class="carousel_video_acervo">
+          <img src="img/icon-left.webp" alt="" onclick="back_carousel_video_acervo()">
+          <div class="albuns-carousel_video_acervo" id="albuns-carousel_video_acervo">
+            <div class="item-carousel_video_acervo">
+              <label id="first_cover_carousel_video_acervo" onmouseover="hover_carousel_acervo(0)" onmouseout="hoverOut_carousel_acervo(0)" onclick="acervo_video(0)"><img src="img/Cover_1.webp" alt="" id="cover_carousel_video_acervo"><img src="img/Play.svg" alt="" id="btn_carousel_video_acervo"  ></label>
+              <label onmouseover="hover_carousel_acervo(1)" onmouseout="hoverOut_carousel_acervo(1)" onclick="acervo_video(1)"><img src="img/Cover_2.webp" alt="" id="cover_carousel_video_acervo"><img src="img/Play.svg" alt="" id="btn_carousel_video_acervo" ></label>
+              <label onmouseover="hover_carousel_acervo(2)" onmouseout="hoverOut_carousel_acervo(2)" onclick="acervo_video(2)"><img src="img/Cover_3.webp" alt="" id="cover_carousel_video_acervo"><img src="img/Play.svg" alt="" id="btn_carousel_video_acervo" ></label>
+              <label onmouseover="hover_carousel_acervo(3)" onmouseout="hoverOut_carousel_acervo(3)" onclick="acervo_video(3)"><img src="img/Cover_4.webp" alt="" id="cover_carousel_video_acervo"><img src="img/Play.svg" alt="" id="btn_carousel_video_acervo" ></label>
+              <label onmouseover="hover_carousel_acervo(4)" onmouseout="hoverOut_carousel_acervo(4)" onclick="acervo_video(4)"><img src="img/Cover_5.webp" alt="" id="cover_carousel_video_acervo"><img src="img/Play.svg" alt="" id="btn_carousel_video_acervo" ></label>
+              <label onmouseover="hover_carousel_acervo(5)" onmouseout="hoverOut_carousel_acervo(5)" onclick="acervo_video(5)"><img src="img/Cover_6.webp" alt="" id="cover_carousel_video_acervo"><img src="img/Play.svg" alt="" id="btn_carousel_video_acervo" ></label>
+              <label onmouseover="hover_carousel_acervo(6)" onmouseout="hoverOut_carousel_acervo(6)" onclick="acervo_video(6)"><img src="img/Cover_7.webp" alt="" id="cover_carousel_video_acervo"><img src="img/Play.svg" alt="" id="btn_carousel_video_acervo" ></label>
+              <label onmouseover="hover_carousel_acervo(7)" onmouseout="hoverOut_carousel_acervo(7)" onclick="acervo_video(7)"><img src="img/Cover_8.webp" alt="" id="cover_carousel_video_acervo"><img src="img/Play.svg" alt="" id="btn_carousel_video_acervo" ></label>
+            </div>
+          </div>
+          <img src="img/icon-right.webp" alt="" onclick="pass_carousel_video_acervo()">
+        </div>
       </div>
       <div class="carousel" data-anime="fade">
-        <img src="img/icon-left.webp" alt="" onclick="back_carousel2()">
+        <img src="img/icon-left.webp" alt="">
         <div class="albuns-carousel" >
           <div class="item-carousel">
             <label id="first_cover" onmouseover="hover_carousel(0)" onmouseout="hoverOut_carousel(0)" onclick="pop(0)"><img src="img/Cover_1.webp" alt="" id="cover_carousel"><img src="img/Play.svg" alt="" id="btn_carousel"  ></label>
@@ -143,7 +191,7 @@
             <label onmouseover="hover_carousel(7)" onmouseout="hoverOut_carousel(7)" onclick="pop(7)"><img src="img/Cover_8.webp" alt="" id="cover_carousel"><img src="img/Play.svg" alt="" id="btn_carousel" ></label>
           </div>
         </div>
-        <img src="img/icon-right.webp" alt="" onclick="pass_carousel2()">
+        <img src="img/icon-right.webp" alt="">
       </div>
       <div class="fixed-top" id="pop-up">
         <div id="Phone_pop-up">

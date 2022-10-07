@@ -385,7 +385,129 @@ article > div{
     opacity: 0.3;
     transition: 500ms;
 }
+/*Estilização video acervo*/
 
+#video_acervo{
+    height: 550px;
+    width: 550px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#Phone_acervo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#bg_phone_acervo{
+    height: 458px;
+    position: absolute;
+}
+
+#Video_acervo {
+    height: 400px;
+    margin-left: 2.5px;
+    position: relative;
+}
+
+.carousel_video_acervo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 550px;
+    height: 235px;
+    margin-top: 50px;
+}
+
+#close_video_acervo{
+    width: 17px;
+    margin-left: auto;
+}
+
+#close_video_acervo:hover{
+    cursor: pointer;
+}
+
+#muted_video_acervo{
+    width: 19px;
+    position: absolute;
+    margin-top: 186px;
+    margin-left: 95px;
+}
+
+#muted_video_acervo:hover{
+    cursor: pointer;
+}
+
+#speaker_video_acervo{
+    width: 19px;
+    position: absolute;
+    margin-top: 186px;
+    margin-left: 95px;
+}
+
+#speaker_video_acervo:hover{
+    cursor: pointer;
+}
+
+.carousel_video_acervo img {
+    width: 58px;
+}
+
+.carousel_video_acervo img:hover{
+    cursor: pointer;
+}
+
+.albuns-carousel_video_acervo {
+    height: 82px;
+    width: 433px;
+    overflow: scroll;
+}
+
+.albuns-carousel_video_acervo::-webkit-scrollbar {
+    display: none;
+}
+
+.item-carousel_video_acervo{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+}
+
+#cover_carousel_video_acervo {
+    width: 82px;
+    height: 82px;
+    transition: 500ms;
+}
+
+.item-carousel_video_acervo label{
+    width: 82px;
+    height: 82px;
+    margin-bottom: 0;
+    border: none;
+    background: none;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.item-carousel_video_acervo label:not(:first-child){
+    margin-left: 20px;
+}
+
+#btn_carousel_video_acervo{
+    position: absolute;
+    width: 23px;
+    opacity: 0.3;
+    transition: 500ms;
+}
+
+
+/* Fim estilização video acervo */
+/*Estilização pop-up*/
 #pop-up{
     background: #000000c7 0% 0% no-repeat padding-box;
     height: 100vh;
