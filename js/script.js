@@ -305,8 +305,8 @@ const cover1video_acervo = document.getElementById("first_cover_carousel_video_a
 const albuns_carroussel = document.getElementById("albuns-carousel_video_acervo");
 const muted_video_acervo = document.getElementById("muted_video_acervo");
 const speaker_video_acervo = document.getElementById("speaker_video_acervo");
-const covers_carroussel_acervo = document.querySelectorAll('cover_carousel_video_acervo');
-const btn_carroussel_acervo = document.querySelectorAll('btn_carousel_video_acervo');
+const covers_carroussel_acervo = document.querySelectorAll('#cover_carousel_video_acervo');
+const btn_carroussel_acervo = document.querySelectorAll('#btn_carousel_video_acervo');
 var opcao;
 var anterior=0;
 
@@ -320,14 +320,41 @@ function video_anterior(anterior){
 function acervo_video(opcao){
     video_anterior(anterior);
     anterior=opcao;
+    title.style.opacity = "0";
+    albuns.style.opacity = "0";
     title.style.display = "none";
     albuns.style.display = "none";
-    acervo_phone.style.display = "flex";
-    VideosAcervo[opcao].style.display = "flex";
-    VideosAcervo[opcao].play();
-    VideosAcervo[opcao].muted=false;
-    muted_video_acervo.style.display = "none";
-    speaker_video_acervo.style.display = "inline";
+    var temp = 0;
+    covers_carroussel_acervo.forEach(function(element){
+        if(temp==opcao){
+            element.style.width = "82px";
+            element.style.height = "82px";
+        }else{
+            element.style.width = "70px";
+            element.style.height = "70px";
+        }
+        temp++;
+    })
+    if(acervo_phone.style.display == "flex"){
+        VideosAcervo[opcao].style.display = "flex";
+        VideosAcervo[opcao].play();
+        VideosAcervo[opcao].muted=false;
+        muted_video_acervo.style.display = "none";
+        speaker_video_acervo.style.display = "inline";
+    }else{
+        acervo_phone.style.display = "flex";
+        acervo_phone.style.opacity = "0";
+        acervo_phone.style.transition = "800ms";
+        setTimeout(function(){
+            acervo_phone.style.opacity = "1";
+            VideosAcervo[opcao].style.display = "flex";
+            VideosAcervo[opcao].play();
+            VideosAcervo[opcao].muted=false;
+            muted_video_acervo.style.display = "none";
+            speaker_video_acervo.style.display = "inline";
+        },500);
+    }
+    
 
     VideosAcervo[opcao].onended = function() {
         opcao++;
@@ -336,10 +363,17 @@ function acervo_video(opcao){
 }
 
 function close_video_acervo(){
-    VideosAcervo[anterior].pause();
-    title.style.display = "inline";
-    albuns.style.display = "flex";
-    acervo_phone.style.display = "none";
+    acervo_phone.style.opacity = "0";
+    setTimeout(function(){
+        VideosAcervo[anterior].pause();
+        title.style.opacity = "1";
+        albuns.style.opacity = "1";
+        title.style.display = "inline";
+        albuns.style.display = "flex";
+        acervo_phone.style.display = "none";
+        
+    },500);
+    
 }
 
 function mute_video_acervo(){
