@@ -1519,7 +1519,11 @@ footer{
     }
 }
 
-
+@media screen and (max-height:800px) {
+    article {
+        height: 3100px;
+    }
+}
 @keyframes mymove {
     from {opacity: 0;}
     to {opacity: 1;}
