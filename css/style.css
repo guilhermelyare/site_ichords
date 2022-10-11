@@ -1477,6 +1477,14 @@ footer{
         height: 30px;
     }
 
+    .logo-apoiadores img:first-child {
+        width: 99px;
+    }
+
+    .logo-apoiadores img:nth-child(2) {
+        margin-left: -5px;
+    }
+
     .Infos {
         width: 94vw;
         height: 400px;
