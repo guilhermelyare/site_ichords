@@ -388,12 +388,33 @@ function mute_video_acervo(){
     }
 }
 
+//Vairiaveis dos botões do carrossel
+const seta_esquerda = document.getElementById("seta_esquerda");
+const seta_direita = document.getElementById("seta_direita");
+
+function hide_seta(){
+    if (albuns_carroussel.scrollLeft==0){
+        seta_esquerda.style.opacity = 0;
+    }else{
+        seta_esquerda.style.opacity = 1;
+    }
+    if (albuns_carroussel.scrollLeft>=279.20001220703125){
+        seta_direita.style.opacity = 0;
+    }else{
+        seta_direita.style.opacity = 1;
+    }
+}
+
+hide_seta();
+
 function pass_carousel_video_acervo(){
     albuns_carroussel.scrollLeft += 100;
+    hide_seta();
 }
 
 function back_carousel_video_acervo(){
     albuns_carroussel.scrollLeft -= 100;
+    hide_seta();
 }
 
 
