@@ -1484,7 +1484,7 @@ footer{
     }
 
     .Infos div{
-        margin: auto;
+        margin-left: 15px;
     }
 
     .Infos div h3 {
