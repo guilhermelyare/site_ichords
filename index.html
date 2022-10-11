@@ -24,7 +24,7 @@
 <body onload="first()">
   <header>
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="display: flex;">
-      <a id="logo" class="navbar-brand" href="#" onclick="executar1()"><img src="img/ichords.svg" alt="Logo_app" width="45%"></a>
+      <a id="logo" class="navbar-brand" href="#video_section" ><img src="img/ichords.svg" alt="Logo_app" width="45%"></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -42,7 +42,7 @@
 
   </header>
   <main>
-    <section class="video_section">
+    <section class="video_section" id="video_section">
       <div class="Phone">
         <img src="img/VideoFramePhone2.webp" alt="" id="BG">
 
@@ -193,41 +193,6 @@
         </div>
         <img src="img/icon-right.webp" alt="">
       </div>
-      <div class="fixed-top" id="pop-up">
-        <div id="Phone_pop-up">
-          <img src="img/VideoFrame-2.webp" alt="" id="bg_phone_pop-up">
-          <video id="Video_pop-up" style="display: none;">
-            <source src="img/Video2.mp4" type="video/mp4">
-          </video>
-          <video id="Video_pop-up" style="display: none;">
-            <source src="img/Video1.mp4" type="video/mp4">
-          </video>
-          <video id="Video_pop-up" style="display: none;">
-            <source src="img/Video2.mp4" type="video/mp4">
-          </video>
-          <video id="Video_pop-up" style="display: none;">
-            <source src="img/Video1.mp4" type="video/mp4">
-          </video>
-          <video id="Video_pop-up" style="display: none;">
-            <source src="img/Video2.mp4" type="video/mp4">
-          </video>
-          <video id="Video_pop-up" style="display: none;">
-            <source src="img/Video1.mp4" type="video/mp4">
-          </video>
-          <video id="Video_pop-up" style="display: none;">
-            <source src="img/Video2.mp4" type="video/mp4">
-          </video>
-          <video id="Video_pop-up" style="display: none;">
-            <source src="img/Video1.mp4" type="video/mp4">
-          </video>
-          <img src="img/SoundOFF.svg" id="muted_pop-up" alt="" onclick="mute_pop()">
-          <img src="img/SoundON.svg" id="speaker_pop-up" alt="" onclick="mute_pop()">
-          <button id="btn_close_pop-up" onclick="close_pop()"></button>
-        </div>
-        
-        <img src="img/Close.svg" alt="" id="close_pop-up" onclick="close_pop()">
-
-      </div>
     </div>
     
     <div class="faq" id="faq">
@@ -273,7 +238,7 @@
         </div>
         <div class="agradecimento" style="display: none;">
           <h3 id="titulo_agradecimento">Obrigado por se inscrever!</h3>
-          <p>Em x horas você terá acesso ao ichords na sua conta do GooglePlay.</p>
+          <p>Em 24 horas você terá acesso ao ichords na sua conta do GooglePlay.</p>
           <button onclick="new_user()" type="submit" class="new-form">Cadastrar novo usuário</button>
         </div>
     </div>
@@ -313,13 +278,13 @@
       </div>
       <div class="redes_sociais">
         <div class="logos_redes">
-          <a href="" target="_blank"><img src="img/Facebook.svg" alt=""></a>
+          <a href="#footer"><img src="img/Facebook.svg" alt=""></a>
 
-          <a href="" target="_blank"><img src="img/Twitter.svg" alt=""></a>
+          <a href="#footer"><img src="img/Twitter.svg" alt=""></a>
 
-          <a href="" target="_blank"><img src="img/Youtube.svg" alt=""></a>
+          <a href="#footer"><img src="img/Youtube.svg" alt=""></a>
 
-          <a href="" target="_blank"><img src="img/Instagram.svg" alt=""></a>
+          <a href="#footer"><img src="img/Instagram.svg" alt=""></a>
         </div>
         <p>©2022 Ichords</p>
       </div>

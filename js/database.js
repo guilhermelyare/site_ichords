@@ -40,7 +40,7 @@ btn.addEventListener("click", (e) => {
             not_mail.style.display = "none";
         }
     }else{
-        db.collection("contact").doc().set({//acrescentando os dados ao firebase
+        db.collection("Dados dos Leads").doc().set({//acrescentando os dados ao firebase
             data: new Date().toLocaleDateString(),
             time: new Date().toLocaleTimeString(),
             fullname: nome.value,

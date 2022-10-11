@@ -295,7 +295,7 @@ article > div{
 }
 
 .contain_section_4 > aside{
-    width: 337px;
+    width: 310px;
     font-family: 'Roboto', sans-serif;
     display: flex;
     flex-direction: column;
@@ -880,6 +880,7 @@ footer{
 
 [data-anime].animate {
     opacity: 1;
+    transform: translate3d(0,0,0);
 }
 
 @media screen and (max-width:1281px){
@@ -1517,13 +1518,15 @@ footer{
         padding-top: 34px;
         padding-bottom: 50px;
     }
-}
 
-@media screen and (max-height:800px) {
-    article {
-        height: 3100px;
+    @media screen and (max-height:800px) {
+        article {
+            height: 3100px;
+        }
     }
 }
+
+
 @keyframes mymove {
     from {opacity: 0;}
     to {opacity: 1;}

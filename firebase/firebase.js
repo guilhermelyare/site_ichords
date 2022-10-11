@@ -1,11 +1,12 @@
 //Dados de conexão do firebase
 var firebaseConfig = {
-    apiKey: "AIzaSyAmEeBSIBqyTfkKT5GzqGuEwgdmVr8X8gI",
-    authDomain: "test-site-1a8fc.firebaseapp.com",
-    projectId: "test-site-1a8fc",
-    storageBucket: "test-site-1a8fc.appspot.com",
-    messagingSenderId: "526867028130",
-    appId: "1:526867028130:web:00e1f490477697422bdffb"
+    apiKey: "AIzaSyB8NYYRnEYSRqyB8AJlDr3BYcigDdHtneM",
+    authDomain: "dados-do-site-7e5ba.firebaseapp.com",
+    databaseURL: "https://dados-do-site-7e5ba-default-rtdb.firebaseio.com",
+    projectId: "dados-do-site-7e5ba",
+    storageBucket: "dados-do-site-7e5ba.appspot.com",
+    messagingSenderId: "897462020542",
+    appId: "1:897462020542:web:f44de0966132693e9531ef"
 };
 
 firebase.initializeApp(firebaseConfig);
