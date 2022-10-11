@@ -509,70 +509,6 @@ article > div{
 
 
 /* Fim estilização video acervo */
-/*Estilização pop-up*/
-#pop-up{
-    background: #000000c7 0% 0% no-repeat padding-box;
-    height: 100vh;
-    width: 100vw;
-    align-items: center;
-    display: none;
-    justify-content: center;
-}
-
-#Phone_pop-up{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-right: -67px;
-}
-
-#bg_phone_pop-up{
-    height: 645px;
-    position: absolute;
-}
-
-#Video_pop-up{
-    height: 570px;
-    position: absolute;
-    margin-left: 3.8px;
-}
-
-#close_pop-up{
-    width: 25px;
-    height: 32px;
-    margin-bottom: auto;
-    margin-right: 67px;
-    margin-top: 17px;
-}
-
-#close_pop-up:hover{
-    cursor: pointer;
-}
-
-#btn_close_pop-up{
-    width: 100vw;
-    height: 100vh;
-    background: none;
-    border: none;
-    cursor: default;
-}
-
-
-#muted_pop-up{
-    width: 25px;
-    position: absolute;
-    margin-top: 530px;
-    margin-left: 273px;
-}
-
-#speaker_pop-up{
-    width: 25px;
-    position: absolute;
-    margin-top: 530px;
-    margin-left: 273px;
-}
-
-/* Fim da estilização do Acervo */
 
 /* Estilização do FAQ */
 
@@ -661,7 +597,7 @@ details[open] > summary img{
 }
 
 .inscricao > p{
-    width: 796px;
+    width: 800px;
     padding: 2vh 0;
     line-height: 1.2;
     color: #92929daf;
